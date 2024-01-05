@@ -1,4 +1,4 @@
-#include "global.h"
+#include "../include/global.h"
 
 void makeLowercase(string &line) {
     for (int i = 0; i < line.length(); i++) {
