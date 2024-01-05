@@ -76,12 +76,15 @@ void getSemestersTaken() {
 
 void askEditSemester(vector<Semester*> &passVect) {
     cout << "Edit semester? (y/n): ";
-    char in; cin >> in;
+    cin.ignore();
+    char in; 
+    cin >> in;
     switch (in)
     {
     case 'y':
         cout << "Which semester?: ";
-        int reqSem; cin >> reqSem;
+        int reqSem; 
+        cin >> reqSem;
         while(reqSem > semesters.size() || reqSem <= 0) {
             cout << "Invalid semester, input existing one: ";
             cin >> reqSem;
@@ -100,19 +103,20 @@ void askEditSemester(vector<Semester*> &passVect) {
 }
 
 void editSemester(vector<Semester*> &vect, int &semID) {
+    int targetSemID;
     for (int i = 0; i < vect.size(); i++) {
         if (semID == vect[i]->numSemester) {
-            totalPoints -= vect[semID]->gradePoints;
-            totalClasses -= vect[semID]->classes;
+            totalPoints -= vect[i]->gradePoints;
+            totalClasses -= vect[i]->classes;
+            targetSemID = i;
             break;
         }
-        cout << "No matching semester found." << endl;
-    
+        cout << "No matching semester found. Exiting..." << endl;
         return;
     }
-    vect[semID]->getClassesInSemester();
-    vect[semID]->getGradePoints();
-    vect[semID]->showCurrGPAs();
+    vect[targetSemID]->getClassesInSemester();
+    vect[targetSemID]->getGradePoints();
+    vect[targetSemID]->showCurrGPAs();
     askEditSemester(vect);
 }
 
