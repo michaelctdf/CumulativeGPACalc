@@ -1,7 +1,7 @@
 cgpa.cpp
 > askEditSemester 
-- requires double input of 'y' to proceed; something to do with input stream?
+- requires double input of 'y' to proceed -- something to do with input stream?
 - removing cin.ignore() causes an infinite loop of "Edit semester? (y/n): Invalid input" until segfault
 
 > editSemester 
-- object values successfully changed but old points and classes not subtracted from totalPoints and totalClasses
+- object values successfully changed but GPAs end up being incorrect -- old points and classes not subtracted from totalPoints and totalClasses?
