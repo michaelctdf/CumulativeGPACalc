@@ -1,4 +1,4 @@
-#include "cgpaSrc.cpp"
+#include "cgpa.cpp"
 
 using namespace std;
 
