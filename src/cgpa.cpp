@@ -1,5 +1,5 @@
 #include "../include/cgpa.h"
-#include "../include/global.cpp"
+#include "global.cpp"
 
 using namespace std;
 
