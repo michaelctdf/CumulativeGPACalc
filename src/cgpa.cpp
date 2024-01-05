@@ -1,5 +1,5 @@
-#include "../Headers/cgpa.h"
-#include "../Headers/Global/globalSrc.cpp"
+#include "../include/cgpa.h"
+#include "../include/global.cpp"
 
 using namespace std;
 
